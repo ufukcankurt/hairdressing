@@ -5,15 +5,28 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body{
   height: 3000px;
   font-family: 'Montserrat', sans-serif;
+  position: relative;
 }
 
 :focus{
   outline: 0;
+}
+
+::selection {
+  background: #27ae60;;
+  color: #fff;
+}
+
+.active{
+  background-color: #27ae60;
+  display: inline-block;
+  
 }
 
 .fixed-top{
@@ -48,6 +61,75 @@ body{
   --bs-text-opacity: 1;
   color: #6c757d !important;
   line-height: 1.2;
+}
+
+.button{
+  width: 150px;
+  padding: 15px 20px;
+  margin: 30px 0 0 0;
+  font-size: 14px;
+  color: #fff;
+  background-color: #27ae60;;
+  text-align: left;
+  border: 2px solid #27ae60;
+  transition: .3s ease-in-out;
+  text-decoration: none;
+}
+
+/* .button:hover{
+  color: white;
+  background-color: #27ae60;
+} */
+
+.big-button{
+  display: inline-block;
+  padding: 1.25rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  color: #fff;
+  background-color: #27ae60;
+  border-color: #27ae60;
+}
+
+.big-button:hover,
+.button:hover{
+  color: #fff;
+  background-color: #7bed9f;
+  border-color: #2ed573;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #27ae60;
+  color: white;
+  cursor: pointer;
+  padding: 13px;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+#myBtn:hover {
+  background-color: #7bed9f; /* Add a dark-grey background on hover */
+}
+
+.go-to-top-icon{
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
 }
 
 nav{
@@ -136,29 +218,6 @@ header.masthead .masthead-heading {
   margin-bottom: 4rem;
 }
 
-header.masthead .header-button{
-  display: inline-block;
-  padding: 1.25rem 2.5rem;
-  font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.5;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  color: #fff;
-  background-color: #27ae60;
-  border-color: #27ae60;
-}
-
-header.masthead .header-button:hover{
-  color: #fff;
-  background-color: #7bed9f;
-  border-color: #2ed573;
-}
-
 .second-section{
   padding: 6rem 0;
 }
@@ -245,6 +304,10 @@ header.masthead .header-button:hover{
   width: 100%;
   padding: 0 12px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .third-section .container .item-content{
@@ -288,6 +351,10 @@ header.masthead .header-button:hover{
   font-style: italic;
   font-family: 'Roboto Slab', serif;
   color: #6c757d;
+}
+
+.third-section .container .galery-button{
+  margin-top: 50px;
 }
 
 .fourth-section{
@@ -597,7 +664,7 @@ header.masthead .header-button:hover{
   border-color: #2ed573;
 }
 
-.sixth-section .container .content .left .button{
+/* .sixth-section .container .content .left .button{
   width: 150px;
   padding: 15px 20px;
   margin: 30px 0 0 0;
@@ -612,7 +679,7 @@ header.masthead .header-button:hover{
 .sixth-section .container .content .left .button:hover{
   color: white;
   background-color: #27ae60;
-}
+} */
 
 .sixth-section .container .content .right{
   width: 350px;
@@ -682,6 +749,13 @@ header.masthead .header-button:hover{
   margin-right: 15px;
 }
 
+.sixth-section .container .content .right .text .social-media .social-item a{
+  width: 30px;
+  height: 30px;
+  font-size: 30px;
+  color: black;
+}
+
 .sixth-section .container .content .right .text .social-media .social-item a{width: 100%;height: 100%;}
 
 .sixth-section .container .content .right .text .social-media .social-item a svg{
@@ -722,21 +796,28 @@ footer .container .foot-card{
   margin-top: 0;
 }
 
-.foot-social .social-media .social-item{
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  margin-right: 15px;
+.foot-social .social-media a{
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 25px;
+  text-align: center;
   border: 1px solid #27ae60;
+  color: #27ae60;
+  margin: 5px;
+  transition: .3s ease-in-out;
 }
 
-.foot-social .social-media .social-item a{width: 100%;height: 100%;}
+.foot-social .social-media a:nth-child(1):hover{
+  color: white;
+  background-color: #E4405F;
+  border-color: #E4405F;
+}
 
-.foot-social .social-media .social-item a svg{
-  max-width: 100%;
-  max-height: 100%;
-  width: 100%;
-  height: 100%;
+.foot-social .social-media a:nth-child(2):hover{
+  color: white;
+    background-color: #55acee;
+    border-color: #55acee;
 }
 
 .foot-about-text{

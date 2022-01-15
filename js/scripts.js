@@ -52,3 +52,65 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+
+
+const li = document.querySelectorAll(".links");
+const sec = document.querySelectorAll("section")
+
+function activeMenu(){
+    let len = sec.length;
+    while(--len && window.scrollY + 97 < sec[len].offsetTop){}
+        li.forEach(ltx => ltx.classList.remove("active"));
+        li[len].classList.add("active");
+}
+
+activeMenu();
+window.addEventListener("scroll", activeMenu);
+
+
+
+
+
+
+// let section = document.querySelectorAll('section');
+// let navLinks = document.querySelectorAll('.links a');
+
+// window.onscroll = () =>{
+
+//     section.forEach(sec=>{
+//         let top = window.scrollY;
+//         let offset = sec.offsetTop - 150;
+//         let height = sec.offsetHeight;
+//         let id = sec.getAttribute('id');
+
+//         if(top >= offset && top < offset + height){
+//             navLinks.forEach(links =>{
+//                 links.classList.remove('active');
+//                 document.querySelector('.links a[href*=' + id + ']').classList.add('active');
+//             })
+//         }
+
+//     });
+
+// };
