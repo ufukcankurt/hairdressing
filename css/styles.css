@@ -19,14 +19,14 @@ body{
 }
 
 ::selection {
-  background: #27ae60;;
+  background: #E63D4F;;
   color: #fff;
 }
 
 .active{
-  background-color: #27ae60;
+  background-color: #E63D4F;
   display: inline-block;
-  
+  border-radius: 10px;
 }
 
 .fixed-top{
@@ -69,9 +69,10 @@ body{
   margin: 30px 0 0 0;
   font-size: 14px;
   color: #fff;
-  background-color: #27ae60;;
+  background-color: #E63D4F;
   text-align: left;
-  border: 2px solid #27ae60;
+  border: #E63D4F;
+  border-radius: 10px;
   transition: .3s ease-in-out;
   text-decoration: none;
 }
@@ -91,18 +92,18 @@ body{
   text-decoration: none;
   vertical-align: middle;
   border: 1px solid transparent;
-  border-radius: 0.25rem;
+  border-radius: 10px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
-  background-color: #27ae60;
-  border-color: #27ae60;
+  background-color: #E63D4F;
+  border-color: #E63D4F;
 }
 
 .big-button:hover,
 .button:hover{
   color: #fff;
-  background-color: #7bed9f;
-  border-color: #2ed573;
+  background-color: #ff6b81;
+  border-color: #ff6b81;
 }
 
 #myBtn {
@@ -113,7 +114,7 @@ body{
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #27ae60;
+  background-color: #E63D4F;
   color: white;
   cursor: pointer;
   padding: 13px;
@@ -123,7 +124,7 @@ body{
 }
 
 #myBtn:hover {
-  background-color: #7bed9f; /* Add a dark-grey background on hover */
+  background-color: #ff6b81; /* Add a dark-grey background on hover */
 }
 
 .go-to-top-icon{
@@ -131,6 +132,38 @@ body{
     height: 30px;
     font-size: 30px;
 }
+
+#wp-web{
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 50px;
+  text-align: center;
+  /* border: 1px solid #E63D4F; */
+  color: #25d366;
+  background-color: rgba(0,0,0,0.1);
+  margin: 5px;
+  border-radius: 50%;
+  transition: .3s ease-in-out;
+}
+
+#wp-mobil{
+  display: none;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 25px;
+  text-align: center;
+  border: 1px solid #E63D4F;
+  color: #E63D4F;
+  margin: 5px;
+  transition: .3s ease-in-out;
+}
+
+#mobil-tel{position: fixed;left: 30px;bottom: 116px;width: 70px;height: 70px;line-height: 70px;font-size: 50px;text-align: center;/* border: 1px solid #E63D4F; */color: rgba(0,0,0,0.6);background-color: rgba(0,0,0,0.1);margin: 5px;border-radius: 50%;transition: .3s ease-in-out;}
 
 nav{
   padding-top: 1.5rem;
@@ -186,8 +219,8 @@ nav .container .collapse ul li a {
   font-size: 0.95rem;
   letter-spacing: 0.0625em;
   padding-right: 0.5rem;
-    padding-left: 0.5rem;
-    color: #fff;
+  padding-left: 0.5rem;
+  color: #fff;
 }
 
 header.masthead{
@@ -275,7 +308,7 @@ header.masthead .masthead-heading {
   color: #fff;
   font-size: 64px;
   line-height: 124px;
-  background-color: #27ae60;
+  background-color: #E63D4F;
   text-align: center;
   border-radius: 50%;
 }
@@ -661,7 +694,7 @@ header.masthead .masthead-heading {
 .sixth-section .container .content .left .phone-div .form-row input[type="tel"]:focus,
 .sixth-section .container .content .left .adress-div .form-row input[type="text"]:focus,
 .sixth-section .container .content .left .textarea-div textarea:focus{
-  border-color: #2ed573;
+  border-color: #E63D4F;
 }
 
 /* .sixth-section .container .content .left .button{
@@ -784,7 +817,7 @@ footer .foot-heading{
   font-weight: 600;
 }
 
-footer .foot-text{font-size: 16px;font-family: 'Roboto Slab', serif;margin-bottom: 10px;color: #6c757d;line-height: 1.75;}
+footer .foot-text{font-size: 16px;font-family: 'Roboto Slab', serif;margin-bottom: 10px;color: #6c757d;line-height: 1.75;text-decoration: none;}
 
 footer .container .foot-card{
   width: calc(33.33333% - 24px);
@@ -802,8 +835,8 @@ footer .container .foot-card{
   line-height: 35px;
   font-size: 25px;
   text-align: center;
-  border: 1px solid #27ae60;
-  color: #27ae60;
+  border: 1px solid #E63D4F;
+  color: #E63D4F;
   margin: 5px;
   transition: .3s ease-in-out;
 }
