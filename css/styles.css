@@ -462,31 +462,35 @@ img{
 }
 
 .fourth-section .container .timeline > li .timeline-image{
-  width: 170px;
+  width: 200px;
   height: auto;
   margin-left: -85px;
-  left: 50%;
+  left: 40%;
   position: absolute;
   z-index: 100;
   text-align: center;
   color: white;
   border: 7px solid #e9ecef;
-  border-radius: 100%;
+  /* border-radius: 100%; */
   /* background-color: #ffc800; */
 }
 
+.inverted-photo{
+  left: 58% !important;
+}
+
 .fourth-section .container .timeline > li .timeline-image img{
-  border-radius: 50% !important;
+  /* border-radius: 50% !important; */
   max-width: 100%;
   height: auto;
   vertical-align: middle;
 }
 
 .fourth-section .container .timeline > li .timeline-panel{
-  padding: 0 20px 20px 100px;
+  padding: 0 120px 20px 20px;
   float: left;
   width: 41%;
-  text-align: right;
+  text-align: left;
   position: relative;
 }
 
@@ -539,7 +543,7 @@ img{
 }
 
 .fourth-section .container .timeline  > li.timeline-inverted > .timeline-panel {
-  padding: 0 100px 20px 20px;
+  padding: 0 20px 20px 125px;
 }
 
 .fifth-section{
