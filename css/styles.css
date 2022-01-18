@@ -224,6 +224,7 @@ nav .container .link-content ul li a {
 }
 
 header.masthead{
+  height: 100vh;
   padding-top: 17rem;
   padding-bottom: 12.5rem;
   text-align: center;
@@ -299,6 +300,7 @@ header.masthead .masthead-heading {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .second-section .container .item-content .card .icon{
