@@ -114,3 +114,9 @@ window.addEventListener("scroll", activeMenu);
 //     });
 
 // };
+
+
+
+$(document).ready(function(){
+    var mixer = mixitup(".box-list");
+  })
