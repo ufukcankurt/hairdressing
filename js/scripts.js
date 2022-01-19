@@ -1,12 +1,3 @@
-/*!
-* Start Bootstrap - Agency v7.0.10 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2021 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Navbar shrink function
@@ -74,7 +65,7 @@ function topFunction() {
 }
 
 
-
+// Nav' Active
 const li = document.querySelectorAll(".links");
 const sec = document.querySelectorAll("section")
 
@@ -92,7 +83,7 @@ window.addEventListener("scroll", activeMenu);
 
 
 
-
+//// Nav Active | Alternative
 // let section = document.querySelectorAll('section');
 // let navLinks = document.querySelectorAll('.links a');
 
@@ -116,7 +107,38 @@ window.addEventListener("scroll", activeMenu);
 // };
 
 
-
+// Mixitup | Galery
 $(document).ready(function(){
     var mixer = mixitup(".box-list");
   })
+
+
+// Experience Modal
+  const btns = document.querySelectorAll("[data-target]");
+  const close_btns = document.querySelectorAll(".experience-modal-close");
+  const overlay = document.querySelector("#overlay");
+  
+  btns.forEach((btn)=>{
+      btn.addEventListener("click", ()=> {
+          document.querySelector(btn.dataset.target).classList.add("active");
+          overlay.classList.add("active");
+      })
+  })
+  
+  
+  
+  close_btns.forEach((btn)=>{
+      btn.addEventListener("click", ()=> {
+          // document.querySelector(btn.dataset.target).classList.remove("active");
+          btn.closest(".experience-modal").classList.remove("active");
+          overlay.classList.remove("active");
+      })
+  })
+  
+  window.onclick = (e) => {
+      if(e.target === overlay) {
+          const modals = document.querySelectorAll(".experience-modal");
+          modals.forEach((modal)=> modal.classList.remove("active"));
+          overlay.classList.remove("active");
+      }
+  }
