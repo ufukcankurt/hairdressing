@@ -222,10 +222,11 @@ nav .container .link-content{
 
 nav .container .link-content ul{
   display: flex;
+  margin-bottom: 0;
 }
 
 nav .container .link-content ul li{
-  padding: 10px;
+  padding: 5px;
   margin-right: 1rem;
   list-style: none;
 }
@@ -239,7 +240,7 @@ nav .container .link-content ul li a {
   color: #fff;
 }
 
-header.masthead{
+.masthead{
   height: 100vh;
   padding-top: 17rem;
   padding-bottom: 12.5rem;
@@ -252,7 +253,7 @@ header.masthead{
   background-size: cover;
 }
 
-header.masthead .masthead-subheading {
+.masthead .masthead-subheading {
   font-family: 'Roboto Slab', serif;
   font-size: 2.25rem;
   font-style: italic;
@@ -261,7 +262,7 @@ header.masthead .masthead-subheading {
   
 }
 
-header.masthead .masthead-heading {
+.masthead .masthead-heading {
   font-size: 4.5rem;
   font-weight: 700;
   line-height: 4.5rem;
