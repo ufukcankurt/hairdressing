@@ -142,3 +142,31 @@ $(document).ready(function(){
           overlay.classList.remove("active");
       }
   }
+
+  function myFunction(x) {
+    x.classList.toggle("change");
+  }
+
+
+  const menuIcon = document.querySelector(".menu-icon");
+  const mobilMenu = document.querySelector("#mobil-menu");
+  const body = document.querySelector("body");
+  const mobileLinks = document.querySelector("#mobile-links-ul")
+
+
+  menuIcon.addEventListener("click", function(){
+    mobilMenu.classList.toggle("db-flex")
+    body.classList.toggle("overflow-y-hidden");
+  })
+
+mobileLinks.addEventListener("click", function(){
+    mobilMenu.classList.toggle("db-flex")
+    myFunction(menuIcon);
+    body.classList.toggle("overflow-y-hidden");
+})
+
+
+
+// window.addEventListener("resize", function() {
+//     if (window.innerWidth < 500) resize.classList.remove("nav--is-open");
+//   });
